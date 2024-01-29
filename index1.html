@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+   <style>
+        .btn{
+            padding: 7px;
+            border-radius: 15px;
+            margin-bottom: 10px;
+            background-color: green;
+            color: aliceblue;
+            padding: 10px;
+        }      
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 3%
+        }
+        .box{
+            border: 1px solid black;
+            box-shadow: 0px 0px 1px black;
+            padding: 2%;
+            padding-left: 10%;
+            padding-right: 10%;
+            border-radius: 5%;
+            background-color: rgb(206, 189, 223);
+        }
+        th{
+            background-color: antiquewhite;
+        }
+        th,td{
+            padding: 14px;
+        }
+        table{
+            border-collapse: collapse; 
+        }
+        input, .timer{
+            border-radius: 10px;
+            background-color: aliceblue;
+            padding: 10px;
+            margin: 8px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">    
+    <div class="box">
+        <h1 style="text-align: center;">Time Logger</h1>    
+        <input type="text" required name="task" id="task" placeholder="Task">
+        <br>
+        <input type="text" required name="description" id="desc" placeholder="Description">
+        <br>
+         <div>
+            <br>
+            <p id="time" class="timer"><span id="hr">00</span> : <span id="min">00</span> : <span id="sec">00</span> </p><br>
+            <button class="btn" id="start" style="align-self: center;">Start</button>
+        </div>
+        <!-- <button  id="delete" >Delete    </button> -->
+    </div>
+</div>
+    <div class="container">
+        <table border="1" class="tables" id="table">
+            <caption style="margin: 10px; font-weight: bolder; font-size: 1.7em;">Task Details</caption>
+
+            <thead>
+                <tr>
+                    <th>Task</th>
+                    <th>Description</th>
+                    <th>Duration</th>
+                </tr>
+            </thead>
+            <tbody id="row">               
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
